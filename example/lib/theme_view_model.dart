@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hondooye_design_system/hondooye_design_system.dart';
 
 class ThemeViewModel extends InheritedWidget {
-  ThemeViewModel({super.key, required Widget child}) : super(child: child);
-  final ValueNotifier<ThemeData> theme = ValueNotifier(HdyLightTheme.themeData);
+  ThemeViewModel({super.key, required super.child});
+  final ValueNotifier<ThemeData> theme = ValueNotifier(ThemeData.light());
 
   void setLightMode() {
-    theme.value = HdyLightTheme.themeData;
+    theme.value = ThemeData.light();
   }
 
   void setDarkMode() {
-    theme.value = HdyDarkTheme.themeData;
+    theme.value = ThemeData.dark();
   }
 
   static ThemeViewModel? of(BuildContext context) =>

@@ -4,19 +4,19 @@ import 'home_page.dart';
 import 'splash_page.dart';
 
 class RootPage extends StatefulWidget {
-  const RootPage({Key? key}) : super(key: key);
+  const RootPage({super.key});
 
   @override
   State<RootPage> createState() => _RootPageState();
 }
 
 class _RootPageState extends State<RootPage> {
-  late Future appInit;
+  late Future<bool> appInit;
 
   @override
-  initState() {
-    appInit = appInitialize(context: context);
+  void initState() {
     super.initState();
+    appInit = appInitialize(context: context);
   }
 
   @override

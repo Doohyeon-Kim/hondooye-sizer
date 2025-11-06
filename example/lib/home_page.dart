@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hondooye_sizer/hondooye_sizer.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _MyHomePageState();
